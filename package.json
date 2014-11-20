@@ -1,7 +1,10 @@
 {
   "name": "coffee-test",
   "version": "0.0.1",
+  "author": "Bill Wiens <billwiens@gmail.com>",
+  "description": "A playground for coffee-script and neo4j.",
   "dependencies": {
-    "coffee-script": "1.8.0"
+    "coffee-script": "1.8.0",
+    "neo4j": "1.1.1"
   }
 }
