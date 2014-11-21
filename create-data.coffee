@@ -1,8 +1,7 @@
 
 neo4j = require 'neo4j'
 
-# statically defined ip for now
-db = new neo4j.GraphDatabase 'http://172.16.250.142:7474'
+db = new neo4j.GraphDatabase process.env['NEO4J_URL'] or 'http://172.16.250.142:7474'
 
 # TODO: use a flow control tool to get rid of callback pyramid
 bill = db.createNode {name: 'Bill'}
