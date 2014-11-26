@@ -1,0 +1,12 @@
+---
+# Tasks to install and run our Node.js app
+
+- name: Install local packages based on package.json.
+  npm: path=/srv/js-tooling-test
+
+- name: Install forever globally.
+  npm: name=forever global=yes state=present
+
+# TODO: manage this like an actual service
+- name: Start test Node.js app
+  command: forever start -c /srv/js-tooling-test/node_modules/coffee-script/bin/coffee /srv/js-tooling-test/web.coffee

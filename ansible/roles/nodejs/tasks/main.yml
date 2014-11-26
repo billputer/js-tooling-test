@@ -20,3 +20,6 @@
   apt_repository: repo='deb-src https://deb.nodesource.com/node {{ ansible_distribution_release }} main' state=present
 - name: Install Node.js
   apt: pkg=nodejs state=installed update_cache=yes
+
+# Include tasks to install and run our Node.js app
+- include: app.yml
