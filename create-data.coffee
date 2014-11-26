@@ -15,8 +15,14 @@ bill.save (err, node) ->
       if err
         console.error 'Error saving new node to database:', err
       else
+        # create two relationships
         console.log 'Node saved to database with id:', node.id
         bill.createRelationshipTo dave, 'impresses', {}, (err, relationship) ->
+          if err
+            console.error 'Error creating relationship:', err
+          else
+            console.log 'Relationship created:', relationship.id
+        dave.createRelationshipTo bill, 'highfives', {}, (err, relationship) ->
           if err
             console.error 'Error creating relationship:', err
           else
