@@ -18,7 +18,7 @@ server = http.createServer (request, response) ->
       console.error 'Error querying database:', err
       response.end 'Error querying database.\n'
     else
-      relationships = (result['x.name'] + " " + result['type(r)'] + " " + result['y.name'] + "\n" for result in results)
+      relationships = (result['x.name'] + " " + result['type(r)'] + " " + result['y.name'] + "." for result in results)
       response.write relationships.join '\n'
       response.end "\n"
 
