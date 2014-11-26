@@ -4,7 +4,7 @@
 VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-  config.vm.hostname = "coffee-test"
+  config.vm.hostname = "js-tooling-test"
 
   config.vm.box = "trusty64"
 
