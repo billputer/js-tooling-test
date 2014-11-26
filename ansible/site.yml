@@ -1,0 +1,12 @@
+---
+
+# This is the top-level playbook.
+
+- hosts: all
+  user: vagrant
+  sudo: True
+  gather_facts: True
+  roles:
+    - neo4j
+
+
